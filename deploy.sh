@@ -2,7 +2,8 @@
 
 echo  "Введите имя сайта:"
 
-read  sitename
+sitename=$2
+#read  sitename
 
 yum -y update
 yum -y install epel-release
@@ -223,7 +224,7 @@ server {
 	server_name $sitename www.$sitename;
 
 location / {
-    proxy_pass https://138.124.180.38;
+    proxy_pass https://$1;
 #proxy_set_header Host $http_host;
     proxy_set_header Host \$host;
     proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
