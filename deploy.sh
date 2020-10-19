@@ -239,13 +239,13 @@ EOL
 
 systemctl restart nginx
 
-echo "Полуить LE сертификат?[Y/y|N/n]:"
-read   le
+#echo "Полуить LE сертификат?[Y/y|N/n]:"
+#read   le
 
 
-if [[ $le == "Y" || $le == "y" ]]; then
-        certbot --nginx -d $sitename
-else
-        echo "Bye-bye"
-	exit 1
-fi
+#if [[ $le == "Y" || $le == "y" ]]; then
+#        certbot --nginx -d $sitename
+#else
+#        echo "Bye-bye"
+#	exit 1
+#fi
